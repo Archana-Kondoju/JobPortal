@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { useLoaderData, useParams} from 'react-router-dom'
 import CreatableSelect from 'react-select/creatable';
-import JobPostingData from './../sidebar/JobPostingData';
+import JobPostingData from '../../sidebar/JobPostingData';
 const UpdateJob = () => {
     const [selectedOption,setSelectedOption] = useState(null);
     const {id} = useParams();

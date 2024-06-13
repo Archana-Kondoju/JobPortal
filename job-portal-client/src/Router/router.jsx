@@ -1,15 +1,15 @@
 import {createBrowserRouter,createRoutesFromElements,Route} from "react-router-dom";
-import Home from "../Pages/Home";
+import Home from "../Pages/Home/Home";
 import App from "../App";
-import About from "../Pages/About";
-import CreateJob from "../Pages/CreateJob";
-import MyJobs from "../Pages/MyJobs";
-import SalaryPage from "../Pages/SalaryPage";
-import UpdateJob from "../Pages/UpdateJob";
-import JobDetails from "../Pages/JobDetails";
+import About from "../Pages/About/About";
+import CreateJob from "../Pages/CreateJob/CreateJob";
+import MyJobs from "../Pages/MyJobs/MyJobs";
+import SalaryPage from "../Pages/SalaryPage/SalaryPage";
+import UpdateJob from "../Pages/UpdateJobs/UpdateJob";
+import JobDetails from "../Pages/JobDetails/JobDetails";
 import Login from './../components/Login/Login';
 import Register from "../components/Login/register";
-import Protected from './../components/Protected';
+import Protected from './../components/Protected/Protected';
 
 const router=createBrowserRouter(
   createRoutesFromElements(

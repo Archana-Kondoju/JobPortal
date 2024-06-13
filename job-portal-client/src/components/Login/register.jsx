@@ -20,7 +20,7 @@ const Register = () => {
           const user=userCredential.user;
           localStorage.setItem('token',user.accessToken);
           localStorage.setItem('user',JSON.stringify(user));
-          Navigate('/');
+          Navigate('/login');
         }
         catch(error){
           console.log(error);
@@ -48,12 +48,12 @@ const Register = () => {
               {/* <!--Sign in section--> */}
               <div
                 className="flex flex-row items-center justify-center lg:justify-start">
-                <p className="mb-0 me-4 text-lg">Sign in with</p>
+                <p className="mb-0 me-4 text-lg">Register with</p>
     
     
                 {/* <!-- X --> */}
                 <button
-                  type="button"
+                  type="submit"
                   data-twe-ripple-init
                   data-twe-ripple-color="light"
                   className=" mx-1 inline-block h-9 w-9 rounded-full bg-blue fill-white p-2 uppercase leading-normal shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">

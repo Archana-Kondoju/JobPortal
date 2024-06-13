@@ -1,10 +1,23 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {FaBarsStaggered, FaXmark} from 'react-icons/fa6';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase/firebase.config';
 const Navbar = () => {
+  const navigate=useNavigate();
     const [isMenuOpen, setIsMenuOpen]=useState(false);
+    const [isLoggedIn,setIsLoggedIn]=useState(true);
     const handleMenuToggler=()=>{
       setIsMenuOpen(!isMenuOpen)
+    }
+
+    const handleLogOut = async()=>{
+      await signOut(auth);
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      setIsLoggedIn(false);
+      navigate('/login');
+      // location.reload();
     }
 
     const navItems=[
@@ -40,10 +53,12 @@ const Navbar = () => {
                 }
               </ul>
                 {/* large devices */}
-              <div className='text-base text-primary font-medium space-x-5 hidden lg:block'>
-                <Link to="/login" className='py-2 px-5 border rounded'>Log In</Link>
-                <Link to="/register" className='py-2 px-5 border rounded bg-blue text-white'>Sing Up</Link>
-              </div>
+              <div className='text-base text-primary font-medium space-x-5 hidden lg:block'>{isLoggedIn? <button onClick={handleLogOut} className='py-2 px-5 border rounded bg-blue text-white'>Log Out</button> : 
+              <>              
+              <Link to="/login" className='py-2 px-5 border rounded'>Log In</Link>
+              <Link to="/register" className='py-2 px-5 border rounded bg-blue text-white'>Sing Up</Link>
+              </>
+               }</div>
                 {/* mobile divece */}
                 <div className='md:hidden block'>
                   <button onClick={handleMenuToggler}>{
@@ -77,4 +92,3 @@ const Navbar = () => {
 export default Navbar
 
 
-// https://www.figma.com/file/LTTCZIPu4vfNZ8DR4bOUzd/Job-offer-platform-(Community)?type=design&node-id=17-108&mode=design&t=00o2nHsuhG9WlhDb-0

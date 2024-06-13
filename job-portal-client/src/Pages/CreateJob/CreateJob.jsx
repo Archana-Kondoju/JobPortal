@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import Location from './../sidebar/Location';
+import Location from '../../sidebar/Location';
 import CreatableSelect from 'react-select/creatable';
 // import { CreatableSelect } from 'react-select/dist/declarations/src/Creatable';
 const CreateJob = () => {

@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import PageHeader from '../components/PageHeader'
+import PageHeader from './../../components/PageHeader/PageHeader';
 
 const SalaryPage = () => {
   const [searchText,setSearchText]=useState();

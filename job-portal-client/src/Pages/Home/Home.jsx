@@ -1,9 +1,9 @@
 import React,{useEffect, useState} from 'react'
-import Banner from '../components/Banner'
-import Card from '../components/Card';
-import Jobs from './Jobs';
-import Sidebar from '../sidebar/Sidebar';
-import NewsLetter from '../components/NewsLetter';
+import Card from './../../components/Card/Card';
+import Jobs from './../Jobs/Jobs';
+import Banner from './../../components/Banner/Banner';
+import Sidebar from './../../sidebar/Sidebar';
+import NewsLetter from './../../components/Right_div/NewsLetter';
 
 const Home = () => {
   const [selectedCategory,setSelectedCategory]=useState(null);
