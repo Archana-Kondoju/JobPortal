@@ -23,7 +23,7 @@ This job portal is a web application designed to connect job seekers with hiring
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com//job-portal.git
+   git clone https://github.com/Archana-Kondoju/JobPortal.git
    ```
 2. Navigate to the project directory:
    ```sh
@@ -31,19 +31,19 @@ This job portal is a web application designed to connect job seekers with hiring
    ```
 3. Install dependencies for the client and server:
    ```sh
-   cd client
+   cd job-portal-client
    npm install
-   cd ../server
+   cd job-portal-server
    npm install
    ```
 4. Configure environment variables in a `.env` file.
 5. Start the development servers:
    ```sh
-   cd client
+   cd job-portal-client
    npm start
    ```
    ```sh
-   cd server
+   cd job-portal-server
    npm start
    ```
 
