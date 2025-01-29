@@ -9,10 +9,6 @@ app.use(express.json())
 app.use(cors())
 
 
-// username: archanakondojuk
-// password: P6BGTdpQ8MwcY1yQ
-
-
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@job-portal.aptmsop.mongodb.net/?retryWrites=true&w=majority&appName=job-portal`;
 
